@@ -92,7 +92,7 @@ function Main() {
 
   return (
     <main className=" flex flex-col  mx-auto py-4 h-full w-full max-w-7xl px-3 lg:mt-5 md:mt-4 sm:mt-0">
-        <div className="CardLinkFallBacksContainer flex flex-row justify-center mx-auto py-4 h-full w-full">
+        <section className="CardLinkFallBacksContainer flex flex-row justify-center mx-auto py-4 h-full w-full">
 
           {apiDummy.result.fallBackLinks.map((item, index) => {
             return(
@@ -102,11 +102,10 @@ function Main() {
             )
           })}
 
-        </div>
-
+        </section>
 
         {/* Get GraphicPromo data from API to randomnize which one is returned. And make this a comp. */}
-        <div className="GraphicPromo flex flex-row justify-center mx-auto py-4 h-full w-full lg:mt-8 md:mt-7 sm:mt-0 relative">
+        <section className="GraphicPromo flex flex-row justify-center mx-auto py-4 h-full w-full lg:mt-8 md:mt-7 sm:mt-0 relative">
           {/* IMG brightness needs to be changed to 60%, or else it's just too dark. Tailwind won't let me, and inline would be better for it */}
           <img className="rounded-xl w-full h-full min-h-[365px] object-cover brightness-50" src="https://content.skyscnr.com/m/6a5b5ada966ccdac/original/Easter-Travel-Graphic-Promo-Desktop-2096x800.jpg?imbypass=true"></img>
           <span className="absolute text-white bottom-[16%] left-[35px] font-bold pr-[20px]" style={{fontSize: "1.6em"}}>On the hunt for Easter escapes  
@@ -117,10 +116,9 @@ function Main() {
           </span>
          
         
-        </div>
+        </section>
 
-        
-        <div className="PopularDestinations flex flex-col w-full mt-10">
+        <section className="PopularDestinations flex flex-col w-full mt-10">
             <div className="PopularDestinationHeader">
               <span className="font-bold text-2xl">{apiDummy.result.popularDestinations.title}</span>
               <p className="mt-1">{apiDummy.result.popularDestinations.description}.</p>
@@ -136,7 +134,7 @@ function Main() {
                 )
               })}
             </div>
-        </div>
+        </section>
     </main>
   );
 }
